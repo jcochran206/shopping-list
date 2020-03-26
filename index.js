@@ -33,6 +33,15 @@ function deleteItem(){
         $(e.target).closest('li').remove();
     });
 }
+//toggle line thru item 
+function toggleItem(){
+    $('.shopping-list').on('click', '.shopping-item-toggle', function(e){
+        e.preventDefault();
+        $(e.target).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+    });
+}
+
 
 $(createList);
 $(deleteItem);
+$(toggleItem);
